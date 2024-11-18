@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------------------ #
-# Title: Assignment06_Starter
+# Title: Assignment06
 # Desc: This assignment demonstrates using functions
 # with structured error handling
 # Change Log: (Who, When, What)
