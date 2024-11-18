@@ -25,7 +25,7 @@ FILE_NAME: str = "Enrollments.json"
 menu_choice: str = ""    # Hold the choice made by the user.
 students: list = []      # a table of student data
 
-# Removed all prior programs variable's; I'll be using the above listed variables for
+# Removed all prior programs variables; I'll be using the above listed variables for
 # Assignment06
 # # Define the Data Variables and constants
 # student_first_name: str = ''   # Holds the first name of a student entered by the user.
