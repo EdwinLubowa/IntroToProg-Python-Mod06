@@ -25,8 +25,8 @@ FILE_NAME: str = "Enrollments.json"
 menu_choice: str = ""    # Hold the choice made by the user.
 students: list = []      # a table of student data
 
-# Removed all prior program's variables; I'll be using the above listed variables for
-# Assignment06
+# commented out all prior programs variables; will be using the above listed variables for
+# Assignment06; and the rest will be used as local variables within the functions
 # # Define the Data Variables and constants
 # student_first_name: str = ''   # Holds the first name of a student entered by the user.
 # student_last_name: str = ''    # Holds the last name of a student entered by the user.
@@ -88,7 +88,7 @@ class FileProcessor:
             file = open(file_name, "w")
             json.dump(student_data, file)
             file.close()
-            print("The following data was saved to file!")
+            print("\nThe following data was saved to file!")
             for student in student_data:
                 print(f'Student {student["FirstName"]} '
                       f'{student["LastName"]} is enrolled in {student["CourseName"]}')
@@ -201,7 +201,7 @@ class IO:
                             "LastName": student_last_name,
                             "CourseName": course_name}
             students.append(student_data)
-            print(f"You have registered {student_first_name} {student_last_name} for {course_name}.")
+            print(f"\nYou have registered {student_first_name} {student_last_name} for {course_name}.")
         except ValueError as e:
             IO.output_error_messages("That value is not the correct type of data!", e)
         except Exception as e:
@@ -220,7 +220,7 @@ students = FileProcessor.read_data_from_file(file_name=FILE_NAME, student_data=s
 # Present and Process the data
 while True:
 
-    # Present the menu of choices
+    # Present the menu of choices, get menu choice from user
     IO.output_menu(MENU)
     menu_choice = IO.input_menu_choice()
 
