@@ -105,6 +105,15 @@ class FileProcessor:
 
 # Presentation-------------------------------------------------------------------------------#
 class IO:
+    """
+    A Collection of Presentation Layer Functions that manage user input and output
+
+    ChangeLog: (Who, When, What)
+    Edwin Kintu-Lubowa,11/17/2024,Created Class
+    Edwin Kintu-Lubowa,11/17/2024,Added menu output and input Functions
+    Edwin Kintu-Lubowa,11/17/2024,Added a Function to display the data
+    Edwin Kintu-Lubowa,11/17/2024,Added a Function to display custom error messages
+    """
 
     @staticmethod
     def output_error_messages(message: str, error: Exception = None):
