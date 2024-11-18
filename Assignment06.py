@@ -25,7 +25,7 @@ FILE_NAME: str = "Enrollments.json"
 menu_choice: str = ""    # Hold the choice made by the user.
 students: list = []      # a table of student data
 
-# Removed all prior programs variables; I'll be using the above listed variables for
+# Removed all prior program's variables; I'll be using the above listed variables for
 # Assignment06
 # # Define the Data Variables and constants
 # student_first_name: str = ''   # Holds the first name of a student entered by the user.
@@ -58,7 +58,7 @@ class FileProcessor:
         Edwin Kintu-Lubowa,11/16/2024,Created Function
         :param file_name:
         :param student_list:
-        :return:
+        :return: list
         """
         try:
             file = open(file_name, "r")
@@ -82,7 +82,7 @@ class FileProcessor:
         Edwin Kintu-Lubowa,11/16/2024,Created Function
         :param file_name:
         :param student_list:
-        :return:
+        :return: None
         """
         try:
             file = open(file_name, "w")
@@ -124,7 +124,7 @@ class IO:
         Edwin Kintu-Lubowa, 11/16/2024,Created Function
         :param message:
         :param error:
-        :return:
+        :return: None
         """
         print(message, end="\n\n")
         if error is not None:
@@ -139,7 +139,7 @@ class IO:
         ChangeLog: (Who, When, What)
         Edwin Kintu-Lubowa,11/16/2024,Created Function
         :param menu:
-        :return:
+        :return: None
         """
         print()  # Adding extra space to make it look nicer.
         print(menu)
@@ -152,7 +152,7 @@ class IO:
 
         ChangeLog: (Who, When, What)
         Edwin K<intu-Lubowa,11/16/2024,Created Function
-        :return:
+        :return: str
         """
         choice = "0"
         try:
@@ -171,7 +171,7 @@ class IO:
         ChangeLog: (Who, When, What)
         Edwin Kintu-Lubowa,11/16/2024,Created Function
         :param student_data:
-        :return:None
+        :return: None
         """
         print("-" * 50)
         for student in students:
@@ -187,7 +187,7 @@ class IO:
         ChangeLog: (Who, When, What)
         Edwin Kintu-Lubowa,11/16/2024,Created Function
         :param student_data:
-        :return:
+        :return: list
         """
         try:
             student_first_name = input("Enter the student's first name: ")
