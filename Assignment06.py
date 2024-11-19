@@ -4,6 +4,8 @@
 # with structured error handling
 # Change Log: (Who, When, What)
 # Edwin Kintu-Lubowa,11/16/2024,Created Script
+# Edwin Kintu-Lubowa,11/18/2024,Updated and corrected Parameter names in docstrings
+# Edwin Kintu-Lubowa,11/18/2024,Updated Boolean structure in the finally exceptions
 # ------------------------------------------------------------------------------------------ #
 import json
 
@@ -57,7 +59,7 @@ class FileProcessor:
         ChangeLog: (Who, When, What)
         Edwin Kintu-Lubowa,11/16/2024,Created Function
         :param file_name:
-        :param student_list:
+        :param student_data:
         :return: list
         """
         try:
@@ -67,9 +69,9 @@ class FileProcessor:
         except FileNotFoundError as e:
             IO.output_error_messages("Please check that the file exists and that it is in a json format.", e)
         except Exception as e:
-            IO.output_error_messages("There was a non-specific error!.", e)
+            IO.output_error_messages("Error: There was a problem with reading the file.", e)
         finally:
-            if file.closed == False:
+            if not file.closed:
                 file.close()
         return student_data
 
@@ -81,7 +83,7 @@ class FileProcessor:
         ChangeLog: (Who, When, What)
         Edwin Kintu-Lubowa,11/16/2024,Created Function
         :param file_name:
-        :param student_list:
+        :param student_data:
         :return: None
         """
         try:
@@ -99,7 +101,7 @@ class FileProcessor:
         except Exception as e:
             IO.output_error_messages("There was a non-specific error!", e)
         finally:
-            if file.closed == False:
+            if not file.closed:
                 file.close()
 
 
@@ -151,7 +153,7 @@ class IO:
         This Function gets a menu choice from the user
 
         ChangeLog: (Who, When, What)
-        Edwin K<intu-Lubowa,11/16/2024,Created Function
+        Edwin Kintu-Lubowa,11/16/2024,Created Function
         :return: str
         """
         choice = "0"
@@ -174,7 +176,7 @@ class IO:
         :return: None
         """
         print("-" * 50)
-        for student in students:
+        for student in student_data:
             print(f'Student {student["FirstName"]} '
                   f'{student["LastName"]} is enrolled in {student["CourseName"]}')
         print("-" * 50)
