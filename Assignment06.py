@@ -6,6 +6,7 @@
 # Edwin Kintu-Lubowa,11/16/2024,Created Script
 # Edwin Kintu-Lubowa,11/18/2024,Updated and corrected Parameter names in docstrings
 # Edwin Kintu-Lubowa,11/18/2024,Updated Boolean structure in the finally exceptions
+# Edwin Kintu-Lubowa,11/22/2024,Updated parameter descriptions in docstrings
 # ------------------------------------------------------------------------------------------ #
 import json
 
@@ -58,9 +59,9 @@ class FileProcessor:
 
         ChangeLog: (Who, When, What)
         Edwin Kintu-Lubowa,11/16/2024,Created Function
-        :param file_name:
-        :param student_data:
-        :return: list
+        :param file_name: file to read data from
+        :param student_data: (list of dictionaries) a table of student data read from file
+        :return: (list of dictionaries) - a table of student data
         """
         try:
             file = open(file_name, "r")
@@ -82,8 +83,8 @@ class FileProcessor:
 
         ChangeLog: (Who, When, What)
         Edwin Kintu-Lubowa,11/16/2024,Created Function
-        :param file_name:
-        :param student_data:
+        :param file_name: file to write student data into
+        :param student_data: (list of dictionaries) table of student data to write to file
         :return: None
         """
         try:
@@ -121,9 +122,10 @@ class IO:
         This Function displays custom error messages to the user
 
         ChangeLog: (Who, When, What)
-        Edwin Kintu-Lubowa, 11/16/2024,Created Function
-        :param message:
-        :param error:
+        Edwin Kintu-Lubowa,11/16/2024,Created Function
+        Edwin Kintu-Lubowa,11/22/2024,Updated parameter descriptions
+        :param message: custom error message displayed to user
+        :param error: stores error caught by the 'except' block of code
         :return: None
         """
         print(message, end="\n\n")
@@ -138,7 +140,8 @@ class IO:
 
         ChangeLog: (Who, When, What)
         Edwin Kintu-Lubowa,11/16/2024,Created Function
-        :param menu:
+        Edwin Kintu-Lubowa,11/22/2024,Updated parameter descriptions
+        :param menu: displays menu of options
         :return: None
         """
         print()  # Adding extra space to make it look nicer.
@@ -152,7 +155,8 @@ class IO:
 
         ChangeLog: (Who, When, What)
         Edwin Kintu-Lubowa,11/16/2024,Created Function
-        :return: str
+        Edwin Kintu-Lubowa,11/22/2024,Updated parameter descriptions
+        :return: menu choice in form of string input by user
         """
         choice = "0"
         try:
@@ -170,7 +174,8 @@ class IO:
 
         ChangeLog: (Who, When, What)
         Edwin Kintu-Lubowa,11/16/2024,Created Function
-        :param student_data:
+        Edwin Kintu-Lubowa,11/22/2024,Updated parameter descriptions
+        :param student_data: (list of dictionaries) table of student data
         :return: None
         """
         print("-" * 50)
@@ -186,8 +191,9 @@ class IO:
 
         ChangeLog: (Who, When, What)
         Edwin Kintu-Lubowa,11/16/2024,Created Function
-        :param student_data:
-        :return: list
+        Edwin Kintu-Lubowa, 11/22/2024, Updated parameter descriptions
+        :param student_data: (list of dictionaries) table of student data
+        :return: (list of dictionaries) table of student data
         """
         try:
             student_first_name = input("Enter the student's first name: ")
