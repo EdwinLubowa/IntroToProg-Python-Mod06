@@ -91,9 +91,7 @@ class FileProcessor:
             json.dump(student_data, file)
             file.close()
             print("\nThe following data was saved to file!")
-            for student in student_data:
-                print(f'Student {student["FirstName"]} '
-                      f'{student["LastName"]} is enrolled in {student["CourseName"]}')
+            IO.output_student_courses(student_data=students)
         except FileNotFoundError as e:
             IO.output_error_messages("Please check that the file exists!", e)
         except TypeError as e:
